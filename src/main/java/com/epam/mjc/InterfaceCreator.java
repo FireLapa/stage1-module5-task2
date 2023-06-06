@@ -6,16 +6,12 @@ import java.util.List;
 public class InterfaceCreator {
 
     public Operation<Integer> divideBy(Integer divider) {
-
-        return (List<Integer> arg) -> {
+        return arg -> {
             List<Integer> result = new ArrayList<>();
-
-            for (Integer number : arg) {
-                result.add(number / divider);
+            for (Integer num : arg) {
+                result.add(num / divider);
             }
-
             return result;
         };
-
     }
 }
